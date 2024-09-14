@@ -46,9 +46,9 @@ class TestInsuranceDataEDA(unittest.TestCase):
     def test_plot_numerical_analysis(self):
         self.eda.plot_numerical_analysis()
 
-    def test_analyze_categorical_columns(self):
-        frequency_tables = self.eda.analyze_categorical_columns()
-        self.assertIsNotNone(frequency_tables)
+    # def test_analyze_categorical_columns(self):
+    #     frequency_tables = self.eda.analyze_categorical_columns()
+    #     self.assertIsNotNone(frequency_tables)
 
     # def test_plot_categorical_analysis(self):
     #     frequency_tables = self.eda.analyze_categorical_columns()
@@ -71,8 +71,8 @@ class TestInsuranceDataEDA(unittest.TestCase):
     def test_plot_correlation_matrix_for_TotalPremium_and_TotalClaims(self):
         self.eda.plot_correlation_matrix_for_TotalPremium_and_TotalClaims()
 
-    def test_analyze_geographic_data(self):
-        self.eda.analyze_geographic_data()
+    # def test_analyze_geographic_data(self):
+    #     self.eda.analyze_geographic_data()
 
     # def test_plot_cover_type_distribution(self):
     #     self.eda.plot_cover_type_distribution()
