@@ -7,4 +7,5 @@ __pycache__/
 .mypy_cache
 .idea
 data/
+dvc_storage/
 data.csv
