@@ -16,18 +16,30 @@ class InsuranceDataEDA:
             "plan": ["SumInsured", "TermFrequency", "CalculatedPremiumPerTerm", "ExcessSelected", "CoverCategory", "CoverType", "CoverGroup", "Section", "Product", "StatutoryClass", "StatutoryRiskType"],
             "payment_claim": ["TotalPremium", "TotalClaims", "CapitalOutstanding", "NewVehicle", "WrittenOff", "Rebuilt", "Converted", "CrossBorder", "NumberOfVehiclesInFleet"]
         }
-        self.relevant_numerical_columns = [
-            'SumInsured', 'CalculatedPremiumPerTerm', 'TotalPremium', 'TotalClaims',
-            'Cylinders', 'NumberOfDoors', 'CustomValueEstimate', 'kilowatts',
-            'cubiccapacity', 'CapitalOutstanding'
-        ]
+        # self.relevant_numerical_columns = [
+        #     'SumInsured', 'CalculatedPremiumPerTerm', 'TotalPremium', 'TotalClaims',
+        #     'Cylinders', 'NumberOfDoors', 'CustomValueEstimate', 'kilowatts',
+        #     'cubiccapacity', 'CapitalOutstanding'
+        # ]
+        self.relevant_numerical_columns = [ 
+            "cubiccapacity", "kilowatts", "SumInsured", "CalculatedPremiumPerTerm",
+            "TotalPremium", "TotalClaims", "CapitalOutstanding"
+            ]
+        # self.relevant_categorical_columns = [
+        #     "IsVATRegistered", 'TermFrequency', "LegalType", "Bank", "AccountType",
+        #     "MaritalStatus", "Gender", "Country", "ItemType", "VehicleType",
+        #     "RegistrationYear", "AlarmImmobiliser", "TrackingDevice", 'ExcessSelected',
+        #     "Section", "Product", "StatutoryClass", "StatutoryRiskType", "CrossBorder",
+        #     "CoverCategory", "CoverType", "CoverGroup"
+        # ]
         self.relevant_categorical_columns = [
-            "IsVATRegistered", 'TermFrequency', "LegalType", "Bank", "AccountType",
-            "MaritalStatus", "Gender", "Country", "ItemType", "VehicleType",
-            "RegistrationYear", "AlarmImmobiliser", "TrackingDevice", 'ExcessSelected',
-            "Section", "Product", "StatutoryClass", "StatutoryRiskType", "CrossBorder",
-            "CoverCategory", "CoverType", "CoverGroup"
-        ]
+            "IsVATRegistered","Citizenship","LegalType","Title","Language","Bank","AccountType","MaritalStatus", "ExcessSelected",
+            "Gender","Country","Province","PostalCode","MainCrestaZone","SubCrestaZone","ItemType","mmcode","VehicleType","RegistrationYear",
+            "make","Cylinders","bodytype","NumberOfDoors","CustomValueEstimate","AlarmImmobiliser", "TermFrequency",
+            "TrackingDevice","CoverCategory","CoverType","CoverGroup","Section","Product","StatutoryClass","StatutoryRiskType","NewVehicle",
+            "WrittenOff","Rebuilt","Converted",  "CrossBorder"
+            ]
+        # "VehicleIntroDate", "Model", "NumberOfVehiclesInFleet"
 
     def set_working_directory(self, path):
         os.chdir(path)
