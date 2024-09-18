@@ -12,3 +12,5 @@ lime
 dask
 scipy
 statsmodels
+xgboost
+shap
